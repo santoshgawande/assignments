@@ -1,0 +1,1 @@
+This directory is general for common task or some link or subject related materials.
