@@ -1,0 +1,55 @@
+<html>
+<head>
+<!--<meta http-equiv="refresh" content="10"> -->
+<title>Mod_python Demo</title>
+<body>
+<div id="demo">
+</div>
+<!--<button type="button" onclick="load()">Show time</button> -->
+</div>
+</body>
+<script>
+var xmlhttp;
+function createObject(){
+if(window.XMLHttpRequest){
+xmlhttp=new XMLHttpRequest();
+}
+return xmlhttp;
+if(!xmlhttp){
+alert("NO instance");
+return false;
+}
+}
+
+var auto =setInterval(function callTimer(){
+var param = "t"+Math.random();
+xmlhttp =createObject();
+xmlhttp.onreadystatechange=function(){
+if(xmlhttp.readyState==4){
+if(xmlhttp.status ==200){
+document.getElementById('demo').innerHTML=xmlhttp.responseText;
+}
+}
+}
+xmlhttp.open("GET","hello.py",true);
+xmlhttp.send();
+}, 1000);
+
+/*function load(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if(this.readyState == 4 && this.status == 200){
+
+document.getElementById("d2").innerHTML = this.responseText;
+
+}
+};
+xhttp.open("GET","hello.py",true);
+xhttp.send();
+}
+function x(){
+setTimeout(function(){ location.reload();}, 5000);
+} */
+</script>
+</html>
+
