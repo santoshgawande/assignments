@@ -1,4 +1,5 @@
-**For Installation of mod_python\n**
+**For Installation of mod_python**
+
 *1. first install this packages which required for mod_python.*
 ```bash
 apt-get install apache2
