@@ -1,1 +1,1 @@
-This directory is general for common task or some link or subject related materials.
+This is Assignment related to Selenium to gather news information from News WebSite. 
